@@ -74,7 +74,23 @@ SmartCart AI is built with a **frontend-first architecture** where the AI chat a
 | **Google Maps Platform** | Nearby store discovery (Places API + Maps Embed) |
 | **Firebase Auth** | Google Sign-In authentication |
 | **Firebase Firestore** | User preferences, chat logs, activity analytics |
+## Google Services Integration (Detailed)
 
+### Firebase Authentication
+- Used for secure user login (Google Sign-In)
+- JWT tokens verified in backend middleware
+
+### Google Maps API
+- Used to fetch nearby stores based on user location
+- Integrated with Places API for real-time results
+
+### Google Vision API
+- Image upload → label detection → matched with product tags
+- Enables visual product search
+
+### Real Impact
+- Improves user experience via multi-modal search
+- Combines AI + location + vision for intelligent shopping
 ---
 
 ## 🚀 Setup Instructions
@@ -89,7 +105,18 @@ SmartCart AI is built with a **frontend-first architecture** where the AI chat a
 git clone https://github.com/AA1-34-Ganesh/Retail_ECommerce_Website.git
 cd Retail_ECommerce_Website
 ```
+## Testing Strategy
 
+- API endpoints tested using Jest + Supertest
+- Manual UI testing for:
+  - AI chat responses
+  - Product filtering
+  - Image search
+- Edge cases handled:
+  - No API key (fallback mode)
+  - Empty search results
+  - Network failures
+  
 ### 2. Setup Backend
 ```bash
 cd server
